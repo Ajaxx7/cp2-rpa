@@ -1,0 +1,666 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1234,9417" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="942,9352" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="String_ConteudoApiUF" />
+      <Variable x:TypeArguments="njl:JArray" Name="JsonArray_ConteudoApiUF" />
+      <Variable x:TypeArguments="x:String" Name="String_EstadoEscolhido" />
+      <Variable x:TypeArguments="x:Int32" Name="Int_StatosServidor" />
+      <Variable x:TypeArguments="s:String[]" Name="StringArray_Estados" />
+      <Variable x:TypeArguments="x:Int32" Name="Int_StatusServidorCidade" />
+      <Variable x:TypeArguments="x:String" Name="String_ConteudoApiCidade" />
+      <Variable x:TypeArguments="njl:JArray" Name="JsonArray_ConteudoApiCidade" />
+      <Variable x:TypeArguments="s:String[]" Name="StringArray_Cidades" />
+      <Variable x:TypeArguments="x:String" Name="String_CidadeEscolhida" />
+      <Variable x:TypeArguments="x:String" Name="String_AreaTerritorial" />
+      <Variable x:TypeArguments="x:String" Name="String_AreaUrbanizada" />
+      <Variable x:TypeArguments="x:String" Name="String_CodigoCidade" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Tabela_Municipios" />
+      <Variable x:TypeArguments="x:String" Name="String_QtdSalariosMinimos" />
+      <Variable x:TypeArguments="x:String" Name="String_PibPerCapita" />
+      <Variable x:TypeArguments="x:String" Name="String_MortalidadeInfantil" />
+      <Variable x:TypeArguments="x:String" Name="String_MatriculasFundamental" />
+      <Variable x:TypeArguments="x:String" Name="String_HabitantesCidade" />
+      <Variable x:TypeArguments="x:Int32" Name="índice">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">ForEach`1_1</x:String>
+            <x:String x:Key="SourcePropertyName">CurrentIndex</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="x:Int32" Name="Index" />
+      <Variable x:TypeArguments="x:String" Name="String_CP_RPA_API_URL_Estados" />
+      <Variable x:TypeArguments="x:String" Name="String_CP_RPA_API_URL_Cidades" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CP_RPA_API_URL_Estados" CacheStrategy="None" DisplayName="Get Asset" FolderPath="rm99560@fiap.com.br's workspace" sap:VirtualizedContainerService.HintSize="880,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[String_CP_RPA_API_URL_Estados]</OutArgument>
+      </ui:GetRobotAsset.Value>
+    </ui:GetRobotAsset>
+    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[String_CP_RPA_API_URL_Estados]" sap:VirtualizedContainerService.HintSize="880,102" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" Result="[String_ConteudoApiUF]" StatusCode="[Int_StatosServidor]" TimeoutMS="6000">
+      <ui:HttpClient.Attachments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Attachments>
+      <ui:HttpClient.Cookies>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Cookies>
+      <ui:HttpClient.Headers>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Headers>
+      <ui:HttpClient.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Parameters>
+      <ui:HttpClient.UrlSegments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.UrlSegments>
+    </ui:HttpClient>
+    <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="880,92" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_1" JsonArray="[JsonArray_ConteudoApiUF]" JsonString="[String_ConteudoApiUF]" />
+    <Assign sap:VirtualizedContainerService.HintSize="880,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[StringArray_Estados]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[{"Todos"}]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="[índice]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="880,386" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[JsonArray_ConteudoApiUF]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="njl:JToken">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="njl:JToken" Name="currentJToken" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="496,190" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[StringArray_Estados]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[StringArray_Estados.Concat({currentJToken("sigla").ToString}).ToArray]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="880,324" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Por favor, selecione um estado abaixo:" Options="[StringArray_Estados]" Title="Escolha o estado.">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[String_EstadoEscolhido]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CP_RPA_API_URL_Cidades" CacheStrategy="None" DisplayName="Get Asset" FolderPath="rm99560@fiap.com.br's workspace" sap:VirtualizedContainerService.HintSize="880,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[String_CP_RPA_API_URL_Cidades]</OutArgument>
+      </ui:GetRobotAsset.Value>
+    </ui:GetRobotAsset>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CP_RPA_API_URL_Cidades" CacheStrategy="None" DisplayName="Get Asset" FolderPath="rm99560@fiap.com.br's workspace" sap:VirtualizedContainerService.HintSize="880,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String" />
+      </ui:GetRobotAsset.Value>
+    </ui:GetRobotAsset>
+    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://servicodados.ibge.gov.br/api/v1/localidades/estados/&quot;+String_EstadoEscolhido+&quot;/municipios&quot;]" sap:VirtualizedContainerService.HintSize="880,102" sap2010:WorkflowViewState.IdRef="HttpClient_3" Method="GET" Result="[String_ConteudoApiCidade]" StatusCode="[Int_StatusServidorCidade]" TimeoutMS="6000">
+      <ui:HttpClient.Attachments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Attachments>
+      <ui:HttpClient.Cookies>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Cookies>
+      <ui:HttpClient.Headers>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Headers>
+      <ui:HttpClient.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Parameters>
+      <ui:HttpClient.UrlSegments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.UrlSegments>
+    </ui:HttpClient>
+    <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="880,92" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_2" JsonArray="[JsonArray_ConteudoApiCidade]" JsonString="[String_ConteudoApiCidade]" />
+    <Assign sap:VirtualizedContainerService.HintSize="880,114" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[StringArray_Cidades]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[{"Todos"}]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="880,7413" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[JsonArray_ConteudoApiCidade]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="njl:JToken">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="njl:JToken" Name="currentJToken" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="846,7226" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: IBGE | Portal do IBGE | IBGE" sap:VirtualizedContainerService.HintSize="784,7141" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="6d287f70-724b-4c56-a145-3d4b2ca1929f" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence sap:VirtualizedContainerService.HintSize="750,6901" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="688,6814" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ir para'" sap:VirtualizedContainerService.HintSize="626,225" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/" CVScreenId="4068b647-f666-4f03-98fe-119fda1120c8" CvElementArea="7, 226, 144, 51" CvTextArea="72, 243, 53, 16" CvTextArgument="MENU" CvType="Button" DesignTimeRectangle="-7, 230, 157, 45" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl id='abaMenuLateral' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='abaMenuLateral' tag='DIV' type='' class='' aaname='  MENU ' check:innerText='MENU' /&gt;" Guid="c64c69c0-08df-4329-a2f7-da0cff2c5fed" InformativeScreenshot="4bbaca3b2f8c5a61becfe9b4360d37e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="4068b647-f666-4f03-98fe-119fda1120c8" CvTextArea="384, 156, 1151, 21" CvTextArgument="govbr COMUNICA BR ACESSO A INFORMACAO PARTICIPE LEGISLACAO ORGAOS DO GOVERNO" CvType="Text" DesignTimeRectangle="8, 147, 1903, 42" FullSelectorArgument="&lt;webctrl id='barra-brasil' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='barra-brasil' tag='DIV' type='' class='' aaname=' ' check:innerText='IR PARA O CONTEÚDO&amp;#xD;&amp;#xA;GOVBR&amp;#xD;&amp;#xA;COMUNICA BR&amp;#xD;&amp;#xA;ACESSO À INFORMAÇÃO&amp;#xD;&amp;#xA;PARTICIPE&amp;#xD;&amp;#xA;LEGISLAÇÃO&amp;#xD;&amp;#xA;ÓRGÃOS DO GOVERNO' /&gt;" Guid="352f8665-a704-44a2-90ea-f1152393c3fa" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Municípios'" sap:VirtualizedContainerService.HintSize="626,225" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/" CVScreenId="51a651fd-6208-4048-9b06-f7b558d6a6ca" CvTextArea="31, 403, 74, 17" CvTextArgument="Municipios" CvType="Text" DesignTimeRectangle="8, 387, 400, 43" DesignTimeScaleFactor="1" ElementType="ListItem" FullSelectorArgument="&lt;webctrl id='menu__municipio' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl id='menu__municipio' tag='LI' type='' class='' aaname='                     Municípios                  ' check:innerText='Municípios' /&gt;" Guid="8f29f1e8-8656-43db-a770-e98fd20f7a5c" InformativeScreenshot="28542137268350fdb240ae87bf15c89a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="51a651fd-6208-4048-9b06-f7b558d6a6ca" CvTextArea="31, 360, 56, 14" CvTextArgument="Estados" CvType="Text" DesignTimeRectangle="8, 344, 400, 43" ElementType="ListItem" FullSelectorArgument="&lt;webctrl id='menu__estado' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl id='menu__estado' tag='LI' type='' class='' aaname='                     Estados                  ' check:innerText='Estados' /&gt;" Guid="2f7be2a1-92b0-4bcd-84e6-a4e9135957af" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Todos os municípios'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="626,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" Text="[currentJToken(&quot;nome&quot;).ToString]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/" CVScreenId="ccb00e3d-9b85-4615-a27f-6a6fa270b242" CvElementArea="1005, 234, 858, 34" CvType="InputBox" DesignTimeRectangle="1008, 236, 856, 31" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='busca' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='busca' tag='INPUT' type='text' class='' placeholder='Qual município você procura?' aaname='' /&gt;" Guid="81b92810-03d6-4935-a58b-4ae5b0643bdc" InformativeScreenshot="ee3d862a4bc464121496303325f40fc7.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="ccb00e3d-9b85-4615-a27f-6a6fa270b242" CvTextArea="1006, 206, 150, 17" CvTextArgument="Todos os municipios" CvType="Text" DesignTimeRectangle="1008, 206, 147, 16" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='' aaname='Todos os municípios' check:innerText='Todos os municípios' /&gt;" Guid="f1647836-18aa-4dc6-ab48-731b3e8a9b02" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cidade'" sap:VirtualizedContainerService.HintSize="626,225" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/" CVScreenId="6f4c4797-fadc-4b91-8735-085aec5ab75d" CvElementArea="868, 261, 30, 23" CvTextArea="720, 264, 171, 13" CvTextArgument="Alta Floresta D'Oeste RO" CvType="Button" DesignTimeRectangle="722, 253, 614, 37" DesignTimeScaleFactor="1" ElementType="ListItem" FullSelectorArgument="&lt;webctrl parentid='todos-municipios' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='todos-municipios' tag='LI' type='' class='' aaname='                                                                      ' /&gt;" Guid="36905e4b-fcdc-486d-a75c-d154ba664796" InformativeScreenshot="6a7863d3c7a654fc063b9beb7f6ce7ae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target DesignTimeRectangle="722, 137, 614, 153" ElementType="InputBox" FullSelectorArgument="&lt;webctrl class='por-estado__selecionar-municipio' parentid='terceira-coluna' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='por-estado__selecionar-municipio' parentid='terceira-coluna' tag='DIV' type='' aaname='                                                                                                                                 ' /&gt;" Guid="308e0f22-aed2-40f8-8be2-8cf9a3b8eecc" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NGetText DisplayName="Get Text 'Código do Município'" sap:VirtualizedContainerService.HintSize="626,189" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" TextString="[String_CodigoCidade]" Version="V3">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/sp/adamantina/panorama" CVScreenId="13f3e082-4e5c-4a88-b207-f8dd1e4681cb" CvTextArea="277, 298, 57, 13" CvType="AnyWordGroup" DesignTimeRectangle="278, 297, 203, 16" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='topo__valor' /&gt;" Guid="ebd4df27-c44a-4f35-887e-2d6d4985bdf6" ImageBase64="" InformativeScreenshot="ec3f02cfe0d0d54404a0a382710ef6fd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br/brasil/sp/adamantina/panorama' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="13f3e082-4e5c-4a88-b207-f8dd1e4681cb" CvTextArea="277, 281, 133, 17" CvTextArgument="Codigo do Municipio" CvType="Text" DesignTimeRectangle="278, 281, 203, 16" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='topo__titulo desktop' aaname='                     Código do Município                 ' check:innerText='Código do Município' /&gt;" Guid="3a4e7b47-2c00-44f5-bb56-614865167f66" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                      </uix:NGetText>
+                      <uix:NGetText DisplayName="Get Text 'População'" sap:VirtualizedContainerService.HintSize="626,189" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" Version="V3">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/sp/adamantina/panorama" CVScreenId="13f3e082-4e5c-4a88-b207-f8dd1e4681cb" CvTextArea="663, 456, 50, 15" CvType="AnyWordGroup" DesignTimeRectangle="664, 456, 49, 17" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='' /&gt;" Guid="9a1a5938-5ea8-4380-8441-1ecc6706e3a3" ImageBase64="" InformativeScreenshot="c04e7ba40caa364a362dcd7bb9880395.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br/brasil/sp/adamantina/panorama' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="13f3e082-4e5c-4a88-b207-f8dd1e4681cb" CvTextArea="328, 421, 92, 19" CvTextArgument="POPULACAO" CvType="Text" DesignTimeRectangle="323, 411, 466, 40" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__titulo' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__titulo' type='' tag='TH' aaname='População' check:innerText='POPULAÇÃO' /&gt;" Guid="b93276ac-36c1-4958-9291-7b430d8f9d85" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                      </uix:NGetText>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Trabalho e Rendimento'" sap:VirtualizedContainerService.HintSize="626,225" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/sp/adamantina/panorama" CVScreenId="13f3e082-4e5c-4a88-b207-f8dd1e4681cb" CvElementArea="816, 534, 20, 25" CvType="ArrowButton" DesignTimeRectangle="789, 528, 59, 41" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__seta' tableRow='6' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__seta' type='' tag='TH' aaname='' /&gt;" Guid="cddd4123-587e-45ab-86b4-d098ad32a35f" InformativeScreenshot="88396f5d69c30675144384c4015119c2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br/brasil/sp/adamantina/panorama' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="13f3e082-4e5c-4a88-b207-f8dd1e4681cb" CvTextArea="327, 541, 196, 13" CvTextArgument="TRABALHO E RENDIMENTO" CvType="Text" DesignTimeRectangle="323, 528, 466, 41" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__titulo' tableRow='6' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__titulo' type='' tag='TH' aaname='Trabalho e Rendimento' check:innerText='TRABALHO E RENDIMENTO' /&gt;" Guid="b12483c5-c605-4f16-9a88-21baa615fb46" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NGetText DisplayName="Get Text 'Salário médio'" sap:VirtualizedContainerService.HintSize="626,189" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" TextString="[String_QtdSalariosMinimos]" Version="V3">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/se/aracaju/panorama" CVScreenId="b474b6f1-7226-4393-8f5c-a831e9bb6388" CvTextArea="663, 497, 24, 18" CvType="AnyWordGroup" DesignTimeRectangle="664, 497, 22, 17" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='7' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='' /&gt;" Guid="1d78293f-5db5-454b-bb06-5c43673b90ac" ImageBase64="" InformativeScreenshot="407180deb3a01c7b2ea321d68657d682.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br/brasil/se/aracaju/panorama' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="b474b6f1-7226-4393-8f5c-a831e9bb6388" CvTextArea="327, 499, 315, 16" CvTextArgument="Salario medio mensal dos trabalhadores formais [2021]" CvType="Text" DesignTimeRectangle="323, 492, 336, 28" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__nome' tableRow='7' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__nome' type='' tag='TD' aaname='                                          Salário médio mensal dos trabalhadores formais                                                           ' check:innerText='Salário médio mensal dos trabalhadores formais [2021]' /&gt;" Guid="2a3ff925-2f9a-4332-a98a-0dd89e510ee9" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                      </uix:NGetText>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Educação'" sap:VirtualizedContainerService.HintSize="626,225" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/sp/adamantina/panorama" CVScreenId="c83d3327-cf25-4483-b950-06ce33c282dd" CvElementArea="815, 627, 21, 25" CvType="ArrowButton" DesignTimeRectangle="789, 621, 59, 41" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__seta' tableRow='15' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__seta' type='' tag='TH' aaname='' /&gt;" Guid="a6df08b8-8718-41a1-b242-5041f56d583c" InformativeScreenshot="2369e4c4d7226ef1e34b4824a5be7d43.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br/brasil/sp/adamantina/panorama' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="c83d3327-cf25-4483-b950-06ce33c282dd" CvTextArea="327, 631, 84, 19" CvTextArgument="EDUCACAO" CvType="Text" DesignTimeRectangle="323, 621, 466, 41" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__titulo' tableRow='15' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__titulo' type='' tag='TH' aaname='Educação' check:innerText='EDUCAÇÃO' /&gt;" Guid="96be418c-f450-4081-a41c-b72906032e50" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NGetText DisplayName="Get Text 'Matrículas no'" sap:VirtualizedContainerService.HintSize="626,189" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" TextString="[String_MatriculasFundamental]" Version="V3">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/sp/adamantina/panorama" CVScreenId="315f820c-79b3-464f-8f08-68572aeaaee9" CvTextArea="663, 494, 42, 15" CvType="AnyWordGroup" DesignTimeRectangle="664, 494, 40, 17" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='22' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='' /&gt;" Guid="255b07a6-963c-4d71-aa48-f392d8f84b25" ImageBase64="" InformativeScreenshot="6106511b616ceecf8378eed8c1f50f7b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br/brasil/sp/adamantina/panorama' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="315f820c-79b3-464f-8f08-68572aeaaee9" CvTextArea="327, 496, 233, 16" CvTextArgument="Matriculas no ensino fundamental [2023]" CvType="Text" DesignTimeRectangle="323, 489, 336, 28" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__nome' tableRow='22' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__nome' type='' tag='TD' aaname='                                          Matrículas no ensino fundamental                                                           ' check:innerText='Matrículas no ensino fundamental [2023]' /&gt;" Guid="80797056-d2e4-4a33-8654-45b6a2d00943" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                      </uix:NGetText>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Economia'" sap:VirtualizedContainerService.HintSize="626,225" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/sp/adamantina/panorama" CVScreenId="315f820c-79b3-464f-8f08-68572aeaaee9" CvElementArea="815, 682, 21, 25" CvType="ArrowButton" DesignTimeRectangle="789, 676, 59, 41" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__seta' tableRow='34' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__seta' type='' tag='TH' aaname='' /&gt;" Guid="8ddc2e4d-a8be-4d9e-8643-1a26e65951d1" InformativeScreenshot="4ca32ac8751de267a1e1e0aac7daa8dc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br/brasil/sp/adamantina/panorama' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="315f820c-79b3-464f-8f08-68572aeaaee9" CvTextArea="327, 689, 80, 13" CvTextArgument="ECONOMIA" CvType="Text" DesignTimeRectangle="323, 676, 466, 41" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__titulo' tableRow='34' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__titulo' type='' tag='TH' aaname='Economia' check:innerText='ECONOMIA' /&gt;" Guid="0139b2c6-27c6-4081-8dce-b7952d7568c7" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NGetText DisplayName="Get Text 'PIB per capita [2021]'" sap:VirtualizedContainerService.HintSize="626,189" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" TextString="[String_PibPerCapita]" Version="V3">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/sp/adamantina/panorama" CVScreenId="5f93149b-e74c-42b5-a725-73449a7772ef" CvTextArea="663, 579, 73, 18" CvType="AnyWordGroup" DesignTimeRectangle="664, 579, 71, 17" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='35' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='' /&gt;" Guid="3bde5676-2575-4672-b7ce-1c3e69f05a08" ImageBase64="" InformativeScreenshot="d9b1850e5cf993df9d94862f9b35886c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br/brasil/sp/adamantina/panorama' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="5f93149b-e74c-42b5-a725-73449a7772ef" CvTextArea="327, 581, 121, 16" CvTextArgument="PIB per capita [2021]" CvType="Text" DesignTimeRectangle="323, 574, 336, 28" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__nome' tableRow='35' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__nome' type='' tag='TD' aaname='                                          PIB per capita                                                           ' check:innerText='PIB per capita [2021]' /&gt;" Guid="0a99957f-fd81-42ab-ada4-a2989bf2b226" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                      </uix:NGetText>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Saúde'" sap:VirtualizedContainerService.HintSize="626,225" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/sp/adamantina/panorama" CVScreenId="0cd7ec40-877a-4efb-962f-126114a0a7a8" CvElementArea="815, 750, 22, 25" CvType="ArrowButton" DesignTimeRectangle="789, 744, 59, 41" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__seta' tableRow='45' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__seta' type='' tag='TH' aaname='' /&gt;" Guid="0ff3d250-0053-4523-a44c-599408e34412" InformativeScreenshot="9231e546bd3d64fc792858af96ed8b55.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br/brasil/sp/adamantina/panorama' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="0cd7ec40-877a-4efb-962f-126114a0a7a8" CvTextArea="328, 754, 51, 16" CvTextArgument="SAUDE" CvType="Text" DesignTimeRectangle="323, 744, 466, 41" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__titulo' tableRow='45' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__titulo' type='' tag='TH' aaname='Saúde' check:innerText='SAÚDE' /&gt;" Guid="a7377ac7-5fe6-4ce4-b254-8f46fa5cc428" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NGetText DisplayName="Get Text 'Mortalidade Infantil'" sap:VirtualizedContainerService.HintSize="626,189" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" TextString="[String_MortalidadeInfantil]" Version="V3">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/sp/adamantina/panorama" CVScreenId="0c04a72f-8c8a-4337-a7b1-c49ba58a8939" CvTextArea="664, 620, 32, 17" CvType="AnyWordGroup" DesignTimeRectangle="664, 620, 31, 17" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='46' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='' /&gt;" Guid="d06b5bee-ff7e-4ec1-bff8-7090a2dccb25" ImageBase64="" InformativeScreenshot="0c08f49b2c0cb0377cef5f524a834846.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br/brasil/sp/adamantina/panorama' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="0c04a72f-8c8a-4337-a7b1-c49ba58a8939" CvTextArea="327, 631, 149, 16" CvTextArgument="Mortalidade Infantil [2022]" CvType="Text" DesignTimeRectangle="323, 615, 336, 46" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__nome' tableRow='46' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__nome' type='' tag='TD' aaname='                                          Mortalidade Infantil                                                           ' check:innerText='Mortalidade Infantil [2022]' /&gt;" Guid="3e540840-2dae-44ca-a358-2737ec6c7187" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                      </uix:NGetText>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Meio Ambiente'" sap:VirtualizedContainerService.HintSize="626,225" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/sp/adamantina/panorama" CVScreenId="c9cefbaf-31fd-4a7d-976f-f3eb161ac0cb" CvElementArea="815, 745, 21, 25" CvType="ArrowButton" DesignTimeRectangle="789, 739, 59, 41" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__seta' tableRow='52' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__seta' type='' tag='TH' aaname='' /&gt;" Guid="206ff9da-df6d-4795-aa21-cd6647b17902" InformativeScreenshot="47aeb0a02c813e4e5ac7636a85e6d12c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br/brasil/sp/adamantina/panorama' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="c9cefbaf-31fd-4a7d-976f-f3eb161ac0cb" CvTextArea="327, 752, 117, 13" CvTextArgument="MEIO AMBIENTE" CvType="Text" DesignTimeRectangle="323, 739, 466, 41" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__titulo' tableRow='52' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__titulo' type='' tag='TH' aaname='Meio Ambiente' check:innerText='MEIO AMBIENTE' /&gt;" Guid="c229004d-57c4-4ba6-9866-84db3b866821" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NGetText DisplayName="Get Text 'Área urbanizada [2019]'" sap:VirtualizedContainerService.HintSize="626,189" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" TextString="[String_AreaUrbanizada]" Version="V3">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/sp/adamantina/panorama" CVScreenId="f661eac3-9eb0-49d4-aa14-30e87dd7c5a1" CvTextArea="664, 661, 41, 18" CvType="AnyWordGroup" DesignTimeRectangle="664, 661, 40, 17" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='53' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='' /&gt;" Guid="58af8a00-2c95-4c7b-ad98-b614402b48e4" ImageBase64="" InformativeScreenshot="2818a0a4b606f41422f67698c85c00ae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br/brasil/sp/adamantina/panorama' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="f661eac3-9eb0-49d4-aa14-30e87dd7c5a1" CvTextArea="326, 660, 135, 19" CvTextArgument="Area urbanizada [2019]" CvType="Text" DesignTimeRectangle="323, 656, 336, 28" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__nome' tableRow='53' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__nome' type='' tag='TD' aaname='                                          Área urbanizada                                                           ' check:innerText='Área urbanizada [2019]' /&gt;" Guid="87ffaeaf-dcdf-4e49-bca1-7ac0f07f8a14" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                      </uix:NGetText>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Território'" sap:VirtualizedContainerService.HintSize="626,225" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/sp/adamantina/panorama" CVScreenId="1f5384ce-8c9e-4fa1-b6a9-2fc6c32997c1" CvElementArea="815, 871, 23, 25" CvType="ArrowButton" DesignTimeRectangle="789, 865, 59, 40" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__seta' tableRow='67' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__seta' type='' tag='TH' aaname='' /&gt;" Guid="c7c39df2-9d41-4e02-ab8c-3b90dc325f50" InformativeScreenshot="53d5ef5c170cb4f6a97718d1522a98c3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br/brasil/sp/adamantina/panorama' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="1f5384ce-8c9e-4fa1-b6a9-2fc6c32997c1" CvTextArea="327, 875, 90, 16" CvTextArgument="TERRITORIO" CvType="Text" DesignTimeRectangle="323, 865, 466, 40" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__titulo' tableRow='67' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__titulo' type='' tag='TH' aaname='Território' check:innerText='TERRITÓRIO' /&gt;" Guid="b9085cfe-e2a2-481f-87a2-d01d48ad639c" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NGetText DisplayName="Get Text 'Área da'" sap:VirtualizedContainerService.HintSize="626,189" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="6d287f70-724b-4c56-a145-3d4b2ca1929f" TextString="[String_AreaTerritorial]" Version="V3">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="https://cidades.ibge.gov.br/brasil/sp/adamantina/panorama" CVScreenId="56cc30af-8f7e-41cb-8655-05287213afe6" CvTextArea="663, 587, 59, 18" CvType="AnyWordGroup" DesignTimeRectangle="664, 587, 57, 17" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='68' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='' /&gt;" Guid="aa0ece08-f65e-4f3b-a500-0b2b062a7cd6" ImageBase64="" InformativeScreenshot="fb5e814e400b4d2adc4c0b242da3c9c0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cidades.ibge.gov.br/brasil/sp/adamantina/panorama' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="56cc30af-8f7e-41cb-8655-05287213afe6" CvTextArea="326, 586, 189, 19" CvTextArgument="Area da unidade territorial [2022]" CvType="Text" DesignTimeRectangle="323, 582, 336, 28" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__nome' tableRow='68' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='lista__nome' type='' tag='TD' aaname='                                          Área da unidade territorial                                                           ' check:innerText='Área da unidade territorial [2022]' /&gt;" Guid="01b84f7d-3efb-49c2-ae33-fc1b99123cdd" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                      </uix:NGetText>
+                      <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" FolderPath="rm99560@fiap.com.br's workspace" sap:VirtualizedContainerService.HintSize="626,226" sap2010:WorkflowViewState.IdRef="AddQueueItem_4" Priority="Normal" QueueType="CP_RPA_Fila">
+                        <ui:AddQueueItem.ItemInformation>
+                          <InArgument x:TypeArguments="x:String" x:Key="porte">ND</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="municipio">[currentJToken("nome").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="estado">[String_EstadoEscolhido]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="codigo_municipio">[String_CodigoCidade]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="populacao">[String_HabitantesCidade]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="salario_medio">[String_QtdSalariosMinimos]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="matriculas_fundamental">[String_MatriculasFundamental]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="pib_per_capita">[String_PibPerCapita]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="mortalidade_infantil">[String_MortalidadeInfantil]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="area_urbanizada">[String_AreaUrbanizada]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="area_territorial">[String_AreaTerritorial]</InArgument>
+                        </ui:AddQueueItem.ItemInformation>
+                      </ui:AddQueueItem>
+                      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="626,2650" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                        <ueab:ExcelProcessScopeX.Body>
+                          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="592,2538" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,2453" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="dados_ibge_cidade.xlsx">
+                                <ueab:ExcelApplicationCard.Body>
+                                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="496,2161" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Index = Index + 1]" />
+                                      <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Municípios&quot;).Cell(&quot;B&quot;+Index.ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[currentJToken(&quot;nome&quot;).ToString]" />
+                                      <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Municípios&quot;).Cell(&quot;C&quot;+Index.toString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[String_EstadoEscolhido]" />
+                                      <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Municípios&quot;).Cell(&quot;D&quot;+Index.toString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[String_CodigoCidade]" />
+                                      <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Municípios&quot;).Cell(&quot;E&quot;+Index.toString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[String_HabitantesCidade]" />
+                                      <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Municípios&quot;).Cell(&quot;F&quot;+Index.toString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_5" Value="[String_QtdSalariosMinimos]" />
+                                      <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Municípios&quot;).Cell(&quot;G&quot;+Index.toString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_6" Value="[String_MatriculasFundamental]" />
+                                      <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Municípios&quot;).Cell(&quot;H&quot;+Index.toString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_7" Value="[String_PibPerCapita]" />
+                                      <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Municípios&quot;).Cell(&quot;I&quot;+Index.toString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_8" Value="[String_MortalidadeInfantil]" />
+                                      <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Municípios&quot;).Cell(&quot;J&quot;+Index.toString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_9" Value="[String_AreaUrbanizada]" />
+                                      <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Municípios&quot;).Cell(&quot;K&quot;+Index.toString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,182" sap2010:WorkflowViewState.IdRef="WriteCellX_10" Value="[String_AreaTerritorial]" />
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ueab:ExcelApplicationCard.Body>
+                              </ueab:ExcelApplicationCard>
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:ExcelProcessScopeX.Body>
+                      </ueab:ExcelProcessScopeX>
+                    </Sequence>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAABYlAAAWJQFJUiTwAAACp0lEQVRYR+3WOWgVQRzH8eeFBA/sJJ4RQQVjEbCwUAu1E8ELxRODGIigEMQDUUHwihdeETwRvAVRCxECAaOVREQtFBUrQRstxAtvv799M8u4/Gez6VK8gU/Im/nPzu7Mf2a3VCmV0u1K88l2rwd65lB7KKzrleHbkmtHiwtQ4CpcxPmCLmAPxmI/ruJy4BLO4QTUPhv94EZ2RRUYiWf42wW/sBH1+OHq8nzDPlS5ocuFClmN37A6xpzBIJwN6jrzEXPd0OngvaHpszrE3MYwDMVzV1fUbjd8egN1eOsai2iD1l19p+ITrLiYlnBw2eIairiJ0fB9p+MrrNiYXeEN9Eera8jzBYcxBcuc4RiFV7D6WL6jPrwBPYESwwqWP3iAhVgB7RTVKWGfYCYOwupreYoaP7gcgBWoaW3HGgyB1vwFsnGPoFk5jQ/obCc1I316HQrX8AbK5Hs4hSbMwAD4WG1T64IacBG0kyZiMVaiAY1Yh23Yia1IktdfdAK0rhr0CHZAB8ta6FSch1roSM27AQ3qr6mHmobt0HXvQLP0EsfQB+kNtMC6qPcT76CjVLli7XddfASqsR53EduWG5CMrT81UEJYgRbNjmbE54ES8TFmYTk6kLf+7zEJyQbQDSi5ipzfnraattwYaDcswWQcx2dYfUJX0BfpDehNZgXGaFdoGZIphJJJ66uZsOKzlFPlwVX4oey3AmO0rjp21Xc87sOKs7xGOft94Yfe51ZwjBJQLx4lnN4FVkzMUSQfJmnhh7ZO3gmYdQgD0dWlU57NhxvZFSqqoDOgSCIqZgE2Qx8hVkzMQwyGG9kVVUBPNAeboGzWZ9R13Ajo7bcX46CpvIWwPY/6LkUyXrT4AOjE05Ea0snlPy71f7Y9xsf+v/aVUindo5RK/wCBKJ2ZsQS2QwAAAABJRU5ErkJggg==" InformativeScreenshot="78afb52977ec6183f3eb4a8121d1ca40.jpg" Selector="&lt;html app='chrome.exe' title='IBGE | Portal do IBGE | IBGE' /&gt;" Title="IBGE | Portal do IBGE | IBGE" Url="https://cidades.ibge.gov.br" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+  </Sequence>
+</Activity>

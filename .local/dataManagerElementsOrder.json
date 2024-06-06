@@ -1,0 +1,45 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "String_NomeMunicipio&Sequence_2",
+        "String_EstadoEscolhido&Sequence_2",
+        "Index&Sequence_2",
+        "String_CodigoCidade&Sequence_2",
+        "String_HabitantesCidade&Sequence_2",
+        "String_QtdSalariosMinimos&Sequence_2",
+        "String_MatriculasFundamental&Sequence_2",
+        "String_PibPerCapita&Sequence_2",
+        "String_MortalidadeInfantil&Sequence_2",
+        "String_AreaUrbanizada&Sequence_2",
+        "String_AreaTerritorial&Sequence_2",
+        "filaRecebida&Sequence_1",
+        "TransactionItem&Sequence_1",
+        "strMunicipio&Sequence_1",
+        "strTerritorio&Sequence_1",
+        "strUrb&Sequence_1",
+        "strCdMun&Sequence_1",
+        "strPopCenso&Sequence_1",
+        "strSalFor&Sequence_1",
+        "strMEF&Sequence_1",
+        "strPIB&Sequence_1",
+        "strMort&Sequence_1",
+        "strUF&Sequence_1",
+        "ResultadoFila&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
